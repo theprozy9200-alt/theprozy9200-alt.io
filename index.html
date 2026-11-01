@@ -44,14 +44,60 @@
 <section class="blk" id="curiosidades"><div class="wrap">
 <h2 class="h">Curiosidades para seguir explorando</h2>
 <p class="sub">Imágenes del portafolio y una guía de estudio con la historia, los inventos, las creencias y los líderes de cada época.</p>
+
 <div class="gal">
-<figure><img src="imagenes/deporte.png" alt="Relieve antiguo con escenas de lucha" loading="lazy"><figcaption>Escenas de lucha en el arte antiguo</figcaption></figure>
-<figure><img src="imagenes/images.png" alt="Reconstrucción artística de una ciudad mesopotámica con murallas y puertas monumentales" loading="lazy"><figcaption>Reconstrucción artística de una ciudad mesopotámica</figcaption></figure>
-<figure><img src="imagenes/egicio escritura.png" alt="Escritura egipcia" loading="lazy"><figcaption>Escritura egipcia</figcaption></figure>
-<figure><img src="imagenes/mapa mezomotamia.png" alt="Mapa de Mesopotamia" loading="lazy"><figcaption>Mapa de Mesopotamia</figcaption></figure>
+  <figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Helmed_Hoplite_Sparta.JPG"
+         data-local="imagenes/deporte.png"
+         alt="Escenas de lucha y guerreros en el arte antiguo"
+         loading="lazy" referrerpolicy="no-referrer">
+    <figcaption>Escenas de lucha en el arte antiguo</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Sumer_satellite_map.jpg/960px-Sumer_satellite_map.jpg"
+         data-local="imagenes/images.png"
+         alt="Región de Sumer en Mesopotamia"
+         loading="lazy" referrerpolicy="no-referrer">
+    <figcaption>La región de Sumer, en Mesopotamia</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg/960px-F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg"
+         data-local="imagenes/egicio escritura.png"
+         alt="Código de Hammurabi con escritura cuneiforme"
+         loading="lazy" referrerpolicy="no-referrer">
+    <figcaption>Escritura antigua: el Código de Hammurabi</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg"
+         data-local="imagenes/mapa mezomotamia.png"
+         alt="Gran Pirámide de Guiza, Egipto"
+         loading="lazy" referrerpolicy="no-referrer">
+    <figcaption>Gran Pirámide de Guiza, Egipto</figcaption>
+  </figure>
 </div>
+
 <a class="more" href="civilizaciones.html">Explorar la guía de civilizaciones →</a>
 </div></section>
+
+<script>
+/* Si la imagen de internet falla, usa la local; si también falla, muestra un recuadro */
+document.querySelectorAll('.gal img').forEach(img => {
+  img.addEventListener('error', function handler() {
+    if (img.dataset.local && !img.dataset.triedLocal) {
+      img.dataset.triedLocal = '1';
+      img.src = img.dataset.local;
+    } else {
+      img.removeEventListener('error', handler);
+      img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#1b1e3d"/><text x="200" y="155" fill="#a4a7c6" font-family="sans-serif" font-size="18" text-anchor="middle">Imagen no disponible</text></svg>'
+      );
+    }
+  });
+});
+</script>
 
 <section class="blk" id="quiz"><div class="wrap">
 <h2 class="h">Ponte a prueba</h2>
