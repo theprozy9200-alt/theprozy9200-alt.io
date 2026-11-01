@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora una línea del tiempo interactiva de inventos y descubrimientos desde la antigüedad hasta la era moderna.">
+  <title>Inventos a través del tiempo · Atlas antiguo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://thumb.wikimedia.org">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="inventos.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html">Atlas antiguo</a>
+      <nav class="inventions-nav" aria-label="Navegación principal">
+        <a href="index.html#inventos">Inventos</a>
+        <a href="civilizaciones.html">Civilizaciones</a>
+        <a href="lideres.html">Líderes</a>
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="inventions-hero wrap">
+      <a class="inventions-back" href="index.html#inventos">← Volver a inventos</a>
+      <p class="inventions-kicker">Atlas antiguo · línea del tiempo</p>
+      <h1>Ideas que<br><span>cambiaron el mundo.</span></h1>
+      <p class="lead">Explora inventos y descubrimientos en orden cronológico. Abre cada ficha para conocer su historia y ejemplos, o filtra la línea del tiempo por tema.</p>
+      <div class="inventions-stats" aria-label="Resumen">
+        <span><b>23</b> hitos</span>
+        <span><b>6</b> categorías</span>
+        <span>Del 3500 a. C. a 1928</span>
+      </div>
+    </section>
+
+    <section class="inventions-library" id="descubrimientos" aria-labelledby="inventions-heading">
+      <div class="wrap">
+        <div class="inventions-toolbar">
+          <div><p class="inventions-kicker">Colección interactiva · cronología compartida</p><h2 id="inventions-heading">Inventos y descubrimientos</h2></div>
+          <label class="inventions-search">Buscar un invento o descubrimiento
+            <input id="invention-search" type="search" placeholder="Ej.: imprenta, penicilina..." autocomplete="off">
+          </label>
+        </div>
+        <div class="invention-filters" role="group" aria-label="Filtrar inventos y descubrimientos">
+          <button type="button" class="is-active" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" data-filter="discovery" aria-pressed="false">Descubrimientos</button>
+          <button type="button" data-filter="ancient" aria-pressed="false">Antigüedad</button>
+          <button type="button" data-filter="medieval" aria-pressed="false">Edad Media</button>
+          <button type="button" data-filter="science" aria-pressed="false">Ciencia</button>
+          <button type="button" data-filter="industry" aria-pressed="false">Industria</button>
+          <button type="button" data-filter="communication" aria-pressed="false">Comunicación</button>
+        </div>
+        <p id="invention-results" class="invention-results" role="status" aria-live="polite"></p>
+        <p id="invention-empty" class="invention-empty" hidden>No hay inventos o descubrimientos que coincidan. Prueba otra búsqueda o categoría.</p>
+        <ol id="invention-list" class="invention-list"></ol>
+      </div>
+    </section>
+
+    <section class="invention-detail-section" aria-label="Ficha detallada del invento seleccionado">
+      <div class="wrap" id="invention-detail" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Atlas antiguo · inventos y descubrimientos</span>
+      <a href="civilizaciones.html">Explorar civilizaciones</a>
+      <a href="lideres.html">Conocer a sus líderes</a>
+      <a href="index.html">Volver al inicio</a>
+      <a href="#top">Volver arriba</a>
+    </div>
+  </footer>
+  <script src="inventos.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.guide-hero{padding-block:76px 60px}
+.guide-kicker,.guide-heading>span,.guide-heading p{color:var(--a);font-size:13px;font-weight:600;letter-spacing:.06em}
+.guide-hero h1{max-width:none}
+.guide-hero h1 span{color:var(--a)}
+.guide-hero .lead{margin-bottom:34px}
+.guide-index{display:flex;flex-wrap:wrap;gap:10px}
+.guide-index a:nth-child(n+4){display:inline-block}
+.guide-index a{padding:9px 13px;border:1px solid var(--line);border-radius:3px;text-decoration:none;font-size:14px}
+.guide-index a:hover,.guide-more:hover{border-color:var(--a);color:var(--a)}
+.guide-sections{padding-bottom:50px}
+.guide-civilization{padding:54px 0 62px;border-top:1px solid var(--line);scroll-margin-top:84px}
+.guide-heading{display:flex;align-items:flex-start;gap:18px;margin-bottom:28px}
+.guide-heading>span{padding-top:12px}
+.guide-heading p{margin:0 0 5px;color:var(--mute);letter-spacing:0}
+.guide-heading h2{margin:0;color:var(--a);font:400 clamp(36px,5vw,58px)/1.1 var(--serif)}
+.guide-visual{margin:0 0 18px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--bg2)}
+.guide-visual img{display:block;width:100%;height:clamp(220px,32vw,380px);object-fit:cover}
+.guide-visual-map img{height:clamp(220px,28vw,320px);object-fit:contain;background:#f0eadc}
+.guide-visual figcaption{padding:10px 14px;color:var(--mute);font-size:12px;line-height:1.55}
+.guide-visual figcaption a{color:inherit;text-underline-offset:2px}
+.guide-visual figcaption a:hover{color:var(--a)}
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.guide-grid article{padding:22px;background:var(--bg2);border-left:3px solid var(--a)}
+.guide-grid h3{margin:0 0 8px;font:400 21px/1.2 var(--serif)}
+.guide-grid p{margin:0;color:var(--mute);font-size:15px;line-height:1.7}
+.leader-explore{display:inline-block;margin-top:15px;color:var(--a);font-size:13px;font-weight:800;text-decoration:none}
+.leader-explore:hover{text-decoration:underline;text-underline-offset:4px}
+.guide-more{display:inline-block;margin-top:22px;padding-bottom:4px;color:var(--a);font-weight:700;text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:600px){
+  .guide-hero{padding-top:48px}
+  .guide-grid{grid-template-columns:1fr}
+  .guide-civilization{padding:40px 0}
+  .guide-index{gap:7px}
+  .guide-index a{font-size:13px}
+}

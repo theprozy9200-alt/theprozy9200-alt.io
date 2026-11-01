@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Atlas de las civilizaciones: línea del tiempo interactiva de Mesopotamia, Egipto, Grecia, Roma y la Edad Media, con inventos, pensadores y curiosidades.">
+<title>Atlas de las civilizaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;800&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="preconnect" href="https://thumb.wikimedia.org">
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">Atlas antiguo</a>
+<nav aria-label="Principal"><a href="#linea">Línea del tiempo</a><a href="#inventos">Inventos</a><a href="#pensadores">Pensadores</a><a href="#curiosidades">Curiosidades</a><a href="civilizaciones.html">Civilizaciones</a><a href="informatica.html">Informática</a></nav></div></header>
+
+<main id="top">
+<section class="hero wrap">
+<h1>Cinco mil años de <span id="hword">ideas</span>.</h1>
+<p class="lead">Elige una civilización en la línea del tiempo y mira cómo se solapan: mientras Egipto levantaba pirámides, en Mesopotamia ya se escribían leyes. Cada fecha lleva a su ficha de estudio.</p>
+<a class="more" href="informatica.html">Explorar también la guía de informática →</a>
+<div class="tl" id="linea">
+<div class="tl-scale" aria-hidden="true"><span>3500 a. C.</span><span>2000 a. C.</span><span>500 a. C.</span><span>año 0</span><span>1000 d. C.</span></div>
+<div class="tl-rows" id="rows"></div>
+</div>
+<div class="panel" id="panel" aria-live="polite"></div>
+</section>
+
+<section class="blk" id="inventos"><div class="wrap">
+<h2 class="h">Inventos que cambiaron la vida diaria</h2>
+<p class="sub">Del siglo XIII a 1900, cada herramienta nueva acortó distancias, alargó el día o salvó vidas. Las fechas son aproximadas cuando varias personas trabajaron en la misma idea.</p>
+<a class="more" href="inventos.html">Explorar la línea del tiempo interactiva de inventos →</a>
+<ol class="inv" id="inv"></ol>
+</div></section>
+
+<section class="blk" id="pensadores"><div class="wrap">
+<h2 class="h">Pensadores de Grecia que todavía se estudian</h2>
+<p class="sub">Preguntaron cómo funciona el mundo sin depender solo de mitos. Sus métodos siguen en las clases de matemáticas, medicina y filosofía.</p>
+<div class="phil" id="phil"></div>
+</div></section>
+
+<section class="blk" id="curiosidades"><div class="wrap">
+<h2 class="h">Curiosidades para seguir explorando</h2>
+<p class="sub">Imágenes del portafolio y una guía de estudio con la historia, los inventos, las creencias y los líderes de cada época.</p>
+<div class="gal">
+<figure><img src="imagenes/deporte.png" alt="Relieve antiguo con escenas de lucha" loading="lazy"><figcaption>Escenas de lucha en el arte antiguo</figcaption></figure>
+<figure><img src="imagenes/images.png" alt="Reconstrucción artística de una ciudad mesopotámica con murallas y puertas monumentales" loading="lazy"><figcaption>Reconstrucción artística de una ciudad mesopotámica</figcaption></figure>
+<figure><img src="imagenes/egicio escritura.png" alt="Escritura egipcia" loading="lazy"><figcaption>Escritura egipcia</figcaption></figure>
+<figure><img src="imagenes/mapa mezomotamia.png" alt="Mapa de Mesopotamia" loading="lazy"><figcaption>Mapa de Mesopotamia</figcaption></figure>
+</div>
+<a class="more" href="civilizaciones.html">Explorar la guía de civilizaciones →</a>
+</div></section>
+
+<section class="blk" id="quiz"><div class="wrap">
+<h2 class="h">Ponte a prueba</h2>
+<p class="sub">Tres preguntas rápidas sobre lo que acabas de leer.</p>
+<div class="quiz"><h3 id="q"></h3><div class="opts" id="o"></div><p id="fb" role="status"></p><button id="next" type="button">Siguiente pregunta</button></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Atlas antiguo · portafolio de civilizaciones</span><a href="detalles.html">Fichas de estudio</a><a href="historia.html">Roma y Edad Media</a><a href="civilizaciones.html">Guía de civilizaciones</a><a href="informatica.html">Guía de informática</a><a href="#top">Volver arriba</a></div></footer>
+
+<script src="pensadores.js"></script>
+<script>
+const E=[
+{id:'mesopotamia',n:'Mesopotamia',s:-3500,e:-539,y:'3500 a. C. – 539 a. C.',c:'#e0a04a',w:'ciudades',t:'Entre el Tigris y el Éufrates surgieron las primeras ciudades. Sus escribas presionaban una caña sobre arcilla húmeda y inventaron la escritura cuneiforme para llevar cuentas y guardar acuerdos.',f:[['La escritura cuneiforme','Tablillas de arcilla para registrar cosechas, deudas y relatos.','mesopotamia-escritura'],['El Código de Hammurabi','Leyes escritas sobre comercio, familia y justicia en Babilonia.','mesopotamia-leyes'],['El cielo en base 60','De ahí vienen la hora de 60 minutos y el círculo de 360 grados.','mesopotamia-astronomia']]},
+{id:'egipto',n:'Egipto',s:-3100,e:-30,y:'3100 a. C. – 30 a. C.',c:'#33b8aa',w:'pirámides',t:'El Nilo marcaba el calendario: sus crecidas decidían cuándo sembrar y cuándo construir. Los egipcios unieron ingeniería, escritura jeroglífica y medicina práctica.',f:[['Escritura y papiro','Jeroglíficos en piedra y textos administrativos en papiro.','egipto-escritura'],['Ingeniería monumental','Rampas, trineos y canales para mover bloques enormes.','egipto-ingenieria'],['Medicina','Los papiros de Smith y Ebers describen heridas y remedios.','egipto-medicina']]},
+{id:'grecia',n:'Grecia',s:-800,e:-146,y:'800 a. C. – 146 a. C.',c:'#5a97f5',w:'debates',t:'Cada polis era un laboratorio de política y pensamiento. En Atenas los ciudadanos varones votaban en la Asamblea, y el teatro, la filosofía y los juegos atléticos llenaban el espacio público.',f:[['La democracia ateniense','Participación directa, aunque excluía a mujeres, esclavos y extranjeros.','grecia-democracia'],['Teatro y pensamiento','Tragedia y comedia para discutir poder, destino y costumbres.','grecia-teatro'],['Arte y deporte','Proporción, movimiento y juegos dedicados a los dioses.','grecia-arte']]},
+{id:'roma',n:'Roma',s:-509,e:476,y:'509 a. C. – 476 d. C.',c:'#d0559a',w:'caminos',t:'De ciudad del Lacio a potencia del Mediterráneo. Calzadas, acueductos y un derecho común conectaron pueblos muy distintos bajo una sola administración.',f:[['La República','Senado, asambleas y magistraturas antes del Imperio.','roma-republica'],['Ingeniería romana','Acueductos, puentes y hormigón para ciudades enormes.','roma-ingenieria'],['El derecho','Contratos, propiedad y ciudadanía que influyeron en leyes posteriores.','roma-derecho']],m:'historia.html#roma'},
+{id:'media',n:'Edad Media',s:476,e:1453,y:'476 – 1453 d. C.',c:'#86b85f',w:'saberes',t:'Mil años de reinos, ciudades, monasterios y rutas comerciales. Desde el siglo XI crecieron los gremios y las universidades, y los saberes viajaron entre mundos latino, árabe, persa y asiático.',f:[['Feudalismo','La tierra y los vínculos de dependencia organizaron el campo.','edad-media-feudalismo'],['Ciudades y universidades','Gremios, ferias y centros de estudio como Bolonia.','edad-media-ciudades'],['Transmisión del conocimiento','Traducciones, manuscritos y, hacia 1450, la imprenta.','edad-media-ciencia']],m:'historia.html#edad-media'}];
+const INV=[['Siglo XIII','Gafas','Las lentes para corregir la vista aparecen en Italia y alargan la vida de lectores y artesanos.'],['Siglo XIV','Reloj mecánico','Las ciudades europeas empiezan a medir las horas con engranajes y campanas.'],['Hacia 1450','Imprenta de tipos móviles','Gutenberg abarata los libros y acelera la circulación de ideas.'],['1608','Telescopio','Se patenta en los Países Bajos; Galileo lo apunta al cielo poco después.'],['1769','Máquina de vapor de Watt','Una mejora decisiva que impulsa fábricas, minas y trenes.'],['1796','Vacuna contra la viruela','Edward Jenner demuestra que la inmunización funciona.'],['1876','Teléfono','Alexander Graham Bell patenta la transmisión de la voz por cable.'],['1879','Bombilla eléctrica práctica','Edison logra una lámpara duradera y la luz eléctrica llega a las casas.']];
+const Q=[['¿Qué escritura nació sobre tablillas de arcilla?',['Jeroglífica','Cuneiforme','Latina'],1,'La cuneiforme, de Mesopotamia, se hacía con una caña sobre arcilla húmeda.'],['¿Dónde se votaba en una asamblea de ciudadanos varones libres?',['Atenas','Babilonia','Menfis'],0,'Atenas: la democracia directa excluía a mujeres, esclavos y extranjeros.'],['¿Hacia qué año se difundió en Europa la imprenta de Gutenberg?',['1250','1450','1750'],1,'Hacia 1450, y con ella los libros se volvieron mucho más baratos.']];
+const $=s=>document.querySelector(s),rows=$('#rows'),panel=$('#panel'),root=document.documentElement;
+const pos=y=>(y+3500)/5000*100;
+E.forEach(d=>{const r=document.createElement('div');r.className='tl-row';const b=document.createElement('button');b.className='bar';b.type='button';b.dataset.id=d.id;b.style.cssText=`--c:${d.c};left:${pos(d.s)}%;width:${pos(d.e)-pos(d.s)}%`;b.innerHTML=`${d.n}<small>${d.y}</small>`;b.addEventListener('click',()=>show(d.id));r.append(b);rows.append(r)});
+function show(id){const d=E.find(x=>x.id===id);root.style.setProperty('--a',d.c);$('#hword').textContent=d.w;
+rows.querySelectorAll('.bar').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
+panel.innerHTML=`<div><h2>${d.n}</h2><p class="years">${d.y}</p><p class="t">${d.t}</p>${d.m?`<a class="more" href="${d.m}">Leer más en Roma y Edad Media</a>`:''}</div><div class="facts">${d.f.map(f=>`<a class="fact" href="detalles.html#${f[2]}"><b>${f[0]}</b><span>${f[1]}</span></a>`).join('')}</div>`}
+show('mesopotamia');
+const inventionIds=['gafas','reloj-mecanico','imprenta','telescopio','maquina-vapor','vacuna','telefono','bombilla'];
+$('#inv').innerHTML=INV.map((i,index)=>`<li><time>${i[0]}</time><div><a class="invention-link" href="inventos.html#${inventionIds[index]}"><b>${i[1]}</b><span>${i[2]}</span><small>Explorar ficha ↗</small></a></div></li>`).join('');
+$('#phil').innerHTML=PENSADORES.map(p=>`<a class="card thinker-card" href="pensador.html?persona=${p.id}" style="--c:${p.color}"><h3>${p.name} <span aria-hidden="true">↗</span></h3><em>${p.years}</em><p>${p.short}</p><small>Leer biografía</small></a>`).join('');
+let qi=0;const o=$('#o'),fb=$('#fb'),nx=$('#next');
+function ask(){const q=Q[qi];$('#q').textContent=q[0];fb.textContent='';nx.style.display='none';o.innerHTML='';
+q[1].forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.addEventListener('click',()=>{if(o.dataset.done==qi)return;o.dataset.done=qi;
+b.classList.add(i===q[2]?'ok':'no');if(i!==q[2])o.children[q[2]].classList.add('ok');
+fb.textContent=(i===q[2]?'Correcto. ':'No era esa. ')+q[3];nx.textContent=qi<Q.length-1?'Siguiente pregunta':'Empezar de nuevo';nx.style.display='inline-block'});o.append(b)})}
+nx.addEventListener('click',()=>{qi=(qi+1)%Q.length;ask()});ask();
+</script>
+</body>
+</html>

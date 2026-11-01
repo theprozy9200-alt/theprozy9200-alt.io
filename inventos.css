@@ -1,0 +1,67 @@
+.inventions-hero{padding-block:52px 60px}
+.inventions-back{display:inline-block;margin-bottom:32px;color:var(--a);font-size:14px;font-weight:800;text-decoration:none}
+.inventions-back:hover{text-decoration:underline;text-underline-offset:4px}
+.inventions-kicker{margin:0 0 10px;color:var(--a);font-size:13px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.inventions-hero h1{max-width:none}
+.inventions-hero h1 span{color:var(--a)}
+.inventions-hero .lead{max-width:68ch;margin-bottom:26px}
+.inventions-stats{display:flex;flex-wrap:wrap;gap:10px}
+.inventions-stats span{padding:10px 14px;background:var(--bg2);color:var(--mute);font-size:13px}
+.inventions-stats b{margin-right:5px;color:var(--a);font:400 20px var(--serif)}
+.inventions-library{padding:48px 0 70px;border-top:1px solid var(--line);scroll-margin-top:82px}
+.inventions-toolbar{display:flex;align-items:end;justify-content:space-between;gap:24px}
+.inventions-toolbar h2{margin:0;font:400 clamp(34px,5vw,58px)/1.08 var(--serif)}
+.inventions-search{display:grid;gap:7px;min-width:min(100%,330px);color:var(--mute);font-size:13px;font-weight:700}
+.inventions-search input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:var(--bg2);color:var(--ink);font:400 15px var(--sans)}
+.inventions-search input:focus{outline:2px solid var(--a);outline-offset:2px}
+.invention-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.invention-filters button{padding:9px 13px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--mute);font:600 13px var(--sans);cursor:pointer}
+.invention-filters button:hover,.invention-filters button.is-active{border-color:var(--a);background:var(--a);color:#14162b}
+.invention-results{min-height:22px;margin:17px 0;color:var(--mute);font-size:13px}
+.invention-empty{padding:24px;background:var(--bg2);color:var(--mute);text-align:center}
+.invention-list{position:relative;display:grid;gap:20px;list-style:none;margin:0;padding:0}
+.invention-list:before{position:absolute;top:24px;bottom:24px;left:121px;width:2px;background:var(--line);content:""}
+.invention-item{position:relative;display:grid;grid-template-columns:104px minmax(0,1fr);gap:38px;align-items:start}
+.invention-item[hidden]{display:none}
+.invention-date{z-index:1;display:grid;min-height:48px;place-items:center;padding:8px;border:1px solid var(--a);border-radius:3px;background:var(--bg);color:var(--a);font:400 16px/1.35 var(--serif);text-align:center}
+.invention-date.is-discovery{border-color:#64c8bc;color:#64c8bc}
+.invention-card{display:grid;grid-template-columns:minmax(210px,.7fr) minmax(0,1.3fr);overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--bg2);transition:border-color .2s,transform .2s}
+.invention-card:hover,.invention-card.is-selected{transform:translateY(-2px);border-color:var(--a)}
+.invention-card.is-discovery:hover,.invention-card.is-discovery.is-selected{border-color:#64c8bc}
+.invention-card img{display:block;width:100%;height:100%;min-height:200px;max-height:270px;object-fit:cover;background:#e9e4d9}
+.invention-card-content{align-self:center;padding:23px}
+.invention-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;color:var(--a);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.invention-card.is-discovery .invention-meta{color:#64c8bc}
+.invention-card h3{margin:0 0 8px;font:400 clamp(21px,3vw,30px)/1.15 var(--serif)}
+.invention-card-content>p:not(.invention-meta){margin:0;color:var(--mute);font-size:14px;line-height:1.7}
+.invention-select{margin-top:14px;padding:8px 11px;border:1px solid var(--a);border-radius:2px;background:transparent;color:var(--a);font:700 12px var(--sans);cursor:pointer}
+.invention-select:hover,.invention-select[aria-pressed=true]{background:var(--a);color:#14162b}
+.invention-card.is-discovery .invention-select{border-color:#64c8bc;color:#64c8bc}
+.invention-card.is-discovery .invention-select:hover,.invention-card.is-discovery .invention-select[aria-pressed=true]{background:#64c8bc;color:#14162b}
+.invention-detail-section{padding:58px 0 76px;border-top:1px solid var(--line);background:var(--bg2);scroll-margin-top:82px}
+.invention-detail{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(0,1.2fr);gap:34px;align-items:start;scroll-margin-top:82px}
+.invention-detail-figure{overflow:hidden;margin:0;border:1px solid var(--line);border-radius:3px;background:#e9e4d9}
+.invention-detail-figure img{display:block;width:100%;max-height:440px;min-height:250px;object-fit:cover}
+.invention-detail-figure figcaption{padding:11px 13px;background:var(--bg);color:var(--mute);font-size:11px;line-height:1.6}
+.invention-detail-figure figcaption a{color:inherit;text-underline-offset:2px}
+.invention-detail-figure figcaption a:hover{color:var(--a)}
+.invention-detail-copy .inventions-kicker{margin-bottom:8px}
+.invention-detail-copy .inventions-kicker.is-discovery{color:#64c8bc}
+.invention-detail-copy h2{margin:0 0 12px;font:400 clamp(32px,5vw,52px)/1.1 var(--serif)}
+.invention-detail-copy .invention-detail-date{margin:0 0 17px;color:var(--a);font-weight:700}
+.invention-detail-copy>p:not(.inventions-kicker):not(.invention-detail-date){max-width:72ch;color:var(--mute);font-size:15px;line-height:1.8}
+.invention-detail-copy h3{margin:25px 0 8px;font:400 23px/1.2 var(--serif)}
+.invention-detail-copy ul{display:grid;gap:8px;margin:0;padding-left:20px;color:var(--mute);font-size:14px;line-height:1.7}
+.invention-related{display:inline-block;margin-top:22px;color:var(--a);font-size:13px;font-weight:800;text-decoration:none}
+.invention-related:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:720px){
+  .inventions-hero{padding-top:38px}
+  .inventions-toolbar{align-items:stretch;flex-direction:column}
+  .inventions-search{min-width:0}
+  .invention-list:before{left:20px}
+  .invention-item{grid-template-columns:42px minmax(0,1fr);gap:14px}
+  .invention-date{padding:5px;font-size:12px}
+  .invention-card,.invention-detail{grid-template-columns:1fr}
+  .invention-card img{height:220px;min-height:0}
+  .invention-detail-section{padding-block:40px}
+}

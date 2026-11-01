@@ -1,0 +1,19 @@
+.detail-back { font: 11px var(--mono); text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
+.detail-page { min-height: calc(100vh - 150px); padding: 95px 0 125px; }
+.detail-kicker { color: var(--accent); font: 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.detail-page h1 { max-width: 800px; color: var(--accent); margin: 24px 0 35px; }
+.detail-lead { max-width: 650px; font: 20px/1.55 var(--display); color: var(--ink); }
+.detail-layout { display: grid; grid-template-columns: 1fr .7fr; gap: 10%; margin-top: 70px; border-top: 1px solid var(--line); padding-top: 38px; }
+.detail-copy { max-width: 620px; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.detail-copy p { margin: 0 0 22px; }
+.detail-copy h2 { color: var(--ink); font-size: 34px; margin: 0 0 20px; }
+.detail-list { border-left: 1px solid var(--accent); padding-left: 24px; align-self: start; }
+.detail-list h3 { margin: 0 0 18px; font: 700 17px var(--display); }
+.detail-list ul { list-style: none; margin: 0; padding: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.detail-list li { border-bottom: 1px solid var(--line); padding: 12px 0; }
+.detail-list li:before { content: "+"; color: var(--accent); font: 16px var(--mono); margin-right: 9px; }
+.detail-resource { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; padding: 14px 17px; border: 1px solid var(--ink); font: 11px var(--mono); text-transform: uppercase; transition: background .2s, color .2s; }
+.detail-resource:hover { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.detail-note { color: var(--accent); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+.detail-number { color: var(--accent); font: 11px var(--mono); }
+@media (max-width: 800px) { .detail-page { padding: 70px 0 85px; } .detail-page h1 { font-size: 70px; } .detail-lead { font-size: 18px; } .detail-layout { grid-template-columns: 1fr; gap: 45px; margin-top: 45px; } .detail-back { font-size: 9px; } }
